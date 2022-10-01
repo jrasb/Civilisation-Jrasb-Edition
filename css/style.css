@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+}
+
+#wrapper {
+    background-color: #222;
+    padding: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px;
+    grid-gap: 1px;
+}
+
+.container > div {
+    background-color: #f0f0f0;
+    width: 120px;
+    height: 120px;
+}
+
+.container > div:hover {
+    background-color: #f0f000;
+}
+
+.container > .tile-class-0 {
+    background-color: #00f0f0;
+}
+
+.container > .tile-class-1 {
+    background-color: #00f000;
+}
+
+.container > .tile-class-2 {
+    background-color: #f00;
+}
