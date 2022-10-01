@@ -2,35 +2,76 @@
     margin: 0;
 }
 
+:root {
+    --tile-size-small: 48px;
+}
+
 #wrapper {
     background-color: #222;
     padding: 10px;
 }
 
-.container {
+#container {
+    margin: auto;
+    padding: 25px;
     display: grid;
-    grid-template-columns: 120px 120px 120px 120px;
     grid-gap: 1px;
 }
 
-.container > div {
-    background-color: #f0f0f0;
-    width: 120px;
-    height: 120px;
+.map-size-small {
+    grid-template-columns: repeat(40, var(--tile-size-small));
 }
 
-.container > div:hover {
+#container > div {
+    width: var(--tile-size-small);
+    height: var(--tile-size-small);
+}
+
+#container > div:hover {
     background-color: #f0f000;
 }
 
-.container > .tile-class-0 {
-    background-color: #00f0f0;
+/*ice*/
+.tile-class-i {
+    background-color: #cfdddb;
 }
 
-.container > .tile-class-1 {
-    background-color: #00f000;
+/*snow*/
+.tile-class-s {
+    background-color: #caeae6;
 }
 
-.container > .tile-class-2 {
-    background-color: #f00;
+/*coast*/
+.tile-class-c {
+    background-color: #429c90;
+}
+
+/*ocean*/
+.tile-class-o {
+    background-color: #42779c;
+}
+
+/*plains*/
+.tile-class-p {
+    background-color: #51c258;
+}
+
+/*jungle*/
+.tile-class-j {
+    background-color: #2b841d;
+}
+
+/*forest*/
+.tile-class-f {
+    background-color: #335835;
+}
+
+/*desert*/
+.tile-class-d {
+    background-color: #d4d6ad;
+}
+
+/*mountain*/
+.tile-class-m {
+    background-color: #754a3a;
 }

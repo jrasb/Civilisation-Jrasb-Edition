@@ -1,18 +1,29 @@
 console.log("file loaded");
 
-const tiles = [
-				2, 1, 0, 0, 
-				0, 2, 1, 1,
-				1, 0, 2, 0,
-				2, 0, 1, 0 ];
 
-const changeClass = function() {
-	document.querySelectorAll(".container > div").forEach(
-		(element, index) => {
-			element.className = "tile-class-" + tiles[index];
-		}
-	)
-	return 0;
+
+const container = document.querySelector("#container");
+
+const generateRandomNumber = function() {
+	return Math.floor(Math.random() * 3);
 }
 
-changeClass();
+const generateMap = function() {
+		fetch("/maps/small.json")
+			.then((response) => response.json())
+			.then((json) => {
+				console.log(json.tiles)
+				json.tiles.forEach(
+					(row) => {
+						for (let i = 0; i < row.length; i++){
+							const tileElement = document.createElement("div");
+						tileElement.className = "tile-class-" + row[i];
+
+						container.appendChild(tileElement);
+						}
+					}
+				)
+			});
+}
+
+generateMap();
