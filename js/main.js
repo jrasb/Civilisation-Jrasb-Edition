@@ -1,7 +1,5 @@
 console.log("file loaded");
 
-
-
 const container = document.querySelector("#container");
 
 const generateRandomNumber = function() {
