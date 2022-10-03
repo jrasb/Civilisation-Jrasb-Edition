@@ -1,13 +1,12 @@
-* {
-    margin: 0;
+:root {
+    --tile-size-small: 30px;
 }
 
-:root {
-    --tile-size-small: 48px;
+body {
+    background-color: #222;
 }
 
 #wrapper {
-    background-color: #222;
     padding: 10px;
 }
 
